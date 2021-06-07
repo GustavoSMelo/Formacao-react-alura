@@ -1,10 +1,8 @@
-import { Cliente } from './classes/Cliente.js';
-import { ContaCorrente } from './classes/ContaCorrente.js';
-import { ContaPoupanca } from './classes/ContaPoupanca.js';
+import { Gerente } from './classes/Funcionarios/Gerente.js';
+import { Auth } from './classes/Auth.js';
 
-const client = new Cliente('Gustavo', 123456);
-const accountC = new ContaCorrente(3214, client);
-const accountP = new ContaPoupanca(0, 3214, client);
+const gerente = new Gerente(8000, 'Gustavo', 1231236);
 
-console.log(accountC);
-console.log(accountP);
+gerente.setPassword('5123');
+
+console.log(Auth.login(gerente, '5123'));
