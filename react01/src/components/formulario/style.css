@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea{
+    margin: 15px;
+    border: none;
+    border-radius: 5;
+    box-shadow: 1px 1px 3px #707070;
+    padding: 10px;
+}
+
+input {
+    font-size: 16pt;
+}
+
+textarea {
+    font-size: 12pt;
+}
+
+button {
+    background-color: #5C93DB;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 18px;
+}

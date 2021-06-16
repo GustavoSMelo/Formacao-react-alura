@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+section {
+    padding: 5px;
+    margin: 15px;
+    border: solid 2px #000;
+    border-radius: 10px;
+}
+
+article {
+    padding: 30px;
+    font-size: 24pt;
+    font-weight: bold;
+    border-bottom: solid 2px #000;
+}
+
+footer {
+    padding: 10px;
+    text-align: justify;
+    font-size: 16pt;
+}
