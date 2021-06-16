@@ -25,4 +25,8 @@ export class Funcionario {
         return this.#password;
     }
 
+    auth (pass) {
+        return this.getPassword() === pass;
+    }
+
 }

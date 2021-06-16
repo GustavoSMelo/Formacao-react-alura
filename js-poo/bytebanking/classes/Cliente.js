@@ -1,4 +1,4 @@
-import { ContaCorrente } from "./ContaCorrente.js";
+import { ContaCorrente } from "./Contas/ContaCorrente.js";
 
 export class Cliente {
 
