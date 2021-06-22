@@ -11,3 +11,7 @@ main {
     align-items: center;
     justify-content: center;
 }
+
+span {
+    margin: 30px;
+}
