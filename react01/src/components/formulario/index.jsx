@@ -8,7 +8,8 @@ class Formulario extends Component {
 
         this.state = {
             title: '',
-            annotation: ''
+            annotation: '',
+            category: ''
         }
     }
 
@@ -25,7 +26,13 @@ class Formulario extends Component {
     }
 
     handleClickButton = () => {
-        this.props.criarNota(this.state.title, this.state.annotation);
+        this.props.criarNota(this.state.title, this.state.category, this.state.annotation);
+    }
+
+    handleChangeCategory = (txt) => {
+        this.setState({
+            category: txt
+        });
     }
 
     render () {
@@ -39,6 +46,20 @@ class Formulario extends Component {
                     onChange={this.handleChangeTitle.bind(this)}
                     value={this.state.title}
                 />
+
+                <select
+                    defaultValue={''}
+                    onChange={e => this.handleChangeCategory(e.target.value)}
+                >
+                    <option value='' disabled>Categoria</option>
+                    {this.props.categorias.map((item, index) => <option
+                            value={item}
+                            key={`opt - ${index}`}
+                        >
+                            {item}
+                        </option>)
+                    }
+                </select>
 
                 <textarea
                     onChange={this.handleChangeAnnotations.bind(this)}
