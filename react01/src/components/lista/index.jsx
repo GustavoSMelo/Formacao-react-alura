@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './style.css'
+import './style.css';
+import { FaTrash } from 'react-icons/fa';
 
 class List extends Component {
 
@@ -11,11 +12,17 @@ class List extends Component {
                     this.props.list.map((item, index) => (
                         <section key={index}>
                             <article>
-                                {item.title}
+                                Titulo: {item.title}
+                                <br />
+                                Categoria: {item.category}
                             </article>
                             <footer>
                                 {item.annotation}
                             </footer>
+                            <FaTrash
+                                className='icon'
+                                onClick={() => this.props.deleteCard(index).bind(this)}
+                            />
                         </section>
                     ))
                 }

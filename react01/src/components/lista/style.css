@@ -5,6 +5,7 @@ section {
     margin: 15px;
     border: solid 2px #000;
     border-radius: 10px;
+    width: 300px;
 }
 
 article {
@@ -18,4 +19,9 @@ footer {
     padding: 10px;
     text-align: justify;
     font-size: 16pt;
+}
+
+.icon {
+    cursor: pointer;
+    margin: 6px;
 }
