@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+header {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+header > input {
+    width: 250px;
+    border: none;
+    box-shadow: 1px 1px 3px #707070;
+    border-radius: 5px;
+}
+
+header > button {
+    width: 50px;
+    background-color: #0f6000;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+}
