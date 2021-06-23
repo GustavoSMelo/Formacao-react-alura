@@ -21,7 +21,7 @@ class List extends Component {
                             </footer>
                             <FaTrash
                                 className='icon'
-                                onClick={() => this.props.deleteCard(index).bind(this)}
+                                onClick={() => this.props.deleteCard(index)}
                             />
                         </section>
                     ))
