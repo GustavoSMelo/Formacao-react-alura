@@ -9,6 +9,17 @@ class Categorias extends React.Component {
         }
     }
 
+    handleClickButton = () => {
+        const sentinel = this.state.txtCategoria;
+
+        this.setState({
+            txtCategoria: ''
+        });
+
+        this.props.addCategoria(sentinel);
+
+    }
+
     render () {
         return (
             <header>
@@ -21,7 +32,7 @@ class Categorias extends React.Component {
                     })}
                 />
                 <button
-                    onClick={() => this.props.addCategoria(this.state.txtCategoria)}
+                    onClick={this.handleClickButton.bind(this)}
                     type='button'
                 >
                     Ok
