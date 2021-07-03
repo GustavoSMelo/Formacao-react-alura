@@ -1,11 +1,11 @@
 import React from 'react'
-import Formulario from './components/Formulario'
+import FormularioCadastro from './components/FormularioCadastro'
 import './App.css'
 
 const App = () => {
   return (
     <main className="App">
-      <Formulario />
+      <FormularioCadastro />
     </main>
   )
 }
