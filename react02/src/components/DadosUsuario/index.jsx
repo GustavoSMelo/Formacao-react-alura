@@ -1,12 +1,18 @@
 import React from 'react'
 import { TextField, Button } from '@material-ui/core'
 
-const DadosUsuario = () => {
+// eslint-disable-next-line react/prop-types
+const DadosUsuario = ({ nextFunction }) => {
+  const submitFunction = (event) => {
+    event.preventDefault()
+    nextFunction()
+  }
+
   return (
-    <form>
-      <TextField className='inputField' label='email' type='text' id='email' />
-      <TextField className='inputField' label='password' type='password' id='password' />
-      <Button type='button' variant='contained' color='primary'>Continuar</Button>
+    <form onSubmit={() => submitFunction()}>
+      <TextField className='inputField' label='email' type='text' id='email' required={true} />
+      <TextField className='inputField' label='password' type='password' id='password' required={true} />
+      <Button type='submit' variant='contained' color='primary'>Continuar... </Button>
     </form>
   )
 }
