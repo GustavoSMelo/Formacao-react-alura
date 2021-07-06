@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { TextField, Switch, Button } from '@material-ui/core'
 
-const DadosPessoais = () => {
+// eslint-disable-next-line react/prop-types
+const DadosPessoais = ({ nextFunction }) => {
   const [name, setName] = useState('')
   const [lastName, setLastName] = useState('')
   const [cpf, setCpf] = useState('')
@@ -28,13 +29,18 @@ const DadosPessoais = () => {
     setWantNews(event)
   }
 
+  const submitFunction = (event) => {
+    event.preventDefault()
+    nextFunction()
+  }
+
   return (
-    <form>
-      <TextField id='nome' type='text' label='Nome' className='inputField' onChange={e => handleChangeName(e.target.value)} value={name}/>
+    <form onSubmit={event => submitFunction(event)}>
+      <TextField id='nome' type='text' label='Nome' className='inputField' onChange={e => handleChangeName(e.target.value)} value={name} required={true}/>
 
-      <TextField id='sobrenome' type='text' label='Sobrenome' className='inputField' value={lastName} onChange={e => handleChangeLastName(e.target.value)}/>
+      <TextField id='sobrenome' type='text' label='Sobrenome' className='inputField' value={lastName} onChange={e => handleChangeLastName(e.target.value)} required={true}/>
 
-      <TextField id='cpf' type='text' label='CPF' className='inputField' value={cpf} onChange={e => handleChangeCpf(e.target.value)} />
+      <TextField id='cpf' type='text' label='CPF' className='inputField' value={cpf} onChange={e => handleChangeCpf(e.target.value)} required={true}/>
 
       <section className='row'>
         <section className='row'>
@@ -47,7 +53,7 @@ const DadosPessoais = () => {
           <Switch color='primary' checked={wantNews} onClick={() => handleChangeWantNews(!wantNews)}/>
         </section>
       </section>
-      <Button type='button' color='primary' variant='contained' >Continuar</Button>
+      <Button type='submit' color='primary' variant='contained' >Continuar</Button>
     </form>
   )
 }
