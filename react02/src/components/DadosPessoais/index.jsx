@@ -31,7 +31,7 @@ const DadosPessoais = ({ nextFunction }) => {
 
   const submitFunction = (event) => {
     event.preventDefault()
-    nextFunction()
+    nextFunction({ name, lastName, cpf, wantPromo, wantNews })
   }
 
   return (
