@@ -22,3 +22,9 @@ form {
 .row > label {
     margin-left: 10px !important;
 }
+
+.title-index-form {
+    font-size: 32pt;
+    margin: 35px;
+    text-align: center;
+}
