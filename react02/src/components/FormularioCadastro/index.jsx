@@ -3,7 +3,7 @@ import DadosPessoais from '../DadosPessoais'
 import DadosUsuario from '../DadosUsuario'
 import DadosEntrega from '../DadosEntrega'
 import './style.css'
-import { Typography } from '@material-ui/core'
+import { Typography, Stepper, Step, StepLabel } from '@material-ui/core'
 
 const FormularioCadastro = () => {
   const [etapaAtual, setEtapaAtual] = useState(0)
@@ -32,6 +32,17 @@ const FormularioCadastro = () => {
   return (
     <>
       <h1 className='title-index-form'>Formulario de cadastro</h1>
+      <Stepper activeStep={etapaAtual} className='Stepper'>
+        <Step>
+          <StepLabel>Login</StepLabel>
+        </Step>
+        <Step>
+          <StepLabel>Dados Pessoais</StepLabel>
+        </Step>
+        <Step>
+          <StepLabel>Dados de endereço</StepLabel>
+        </Step>
+      </Stepper>
       {views[etapaAtual]}
     </>
   )
