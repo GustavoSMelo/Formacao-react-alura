@@ -28,3 +28,9 @@ form {
     margin: 35px;
     text-align: center;
 }
+
+.Stepper {
+    margin: auto;
+    margin-bottom: 30px;
+    width: 40%;
+}
