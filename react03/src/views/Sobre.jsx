@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-import '../assets/css/componentes/cartao.css'
+import '../assets/css/components/cartao.css'
 
 const Sobre = () => {
 
