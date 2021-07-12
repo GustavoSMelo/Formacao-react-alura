@@ -9,7 +9,7 @@ const Postagens = () => {
                 <h2 className='titulo-pagina'>Pet notícia</h2>
             </section>
             <CategoriaList />
-            <Posts />
+            <Posts url={'/posts/'}/>
         </main>
     )
 }
