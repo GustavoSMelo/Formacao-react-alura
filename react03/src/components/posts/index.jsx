@@ -4,18 +4,18 @@ import api from '../../api/api'
 import '../../assets/css/components/cartao.css'
 
 
-const Posts = () => {
+const Posts = ({url}) => {
     const [listPosts, setListPosts] = useState([])
     const history = useHistory()
 
     const getDataByAPI = async () => {
-        const response = await api.get('/posts')
+        const response = await api.get(url)
         setListPosts(response.data)
     }
 
     useEffect (() => {
         getDataByAPI()
-    }, [])
+    }, [url])
 
     return (
         <>
