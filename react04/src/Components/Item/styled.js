@@ -6,6 +6,7 @@ export const Container = styled.section`
 
     .text {
         font-weight: bold;
-        margin: 2px;
+        margin-left: 2px;
+        margin-right: 2px;
     }
 `;
