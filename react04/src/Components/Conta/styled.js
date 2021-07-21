@@ -4,11 +4,15 @@ export const Box = styled.section`
     display: flex;
     flex-direction: column !important;
     justify-content: space-between;
-    background-color: white;
+    background-color: ${props => props.theme.inside};
     border-radius: 5px;
     box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.04);
     padding: 20px;
     width: 48%;
+
+    h2, div {
+        color: ${props => props.theme.text};
+    }
 
     @media (max-width: 800px) {
         width: 95%;
@@ -36,4 +40,5 @@ export const Detalhes = styled.span`
 export const Saldo = styled.div`
     font-weight: 700;
     font-size: 32px;
+    color: ${props => props.theme.text};
 `
