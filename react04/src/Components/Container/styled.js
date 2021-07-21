@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const ContainerMain = styled.main`
-  background-color: #f1f1f1;
+  background-color: ${props => props.theme.body};
   min-height: 90vh;
   padding: 0px 15vw;
 
-  section {
+  section.conteudo {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
