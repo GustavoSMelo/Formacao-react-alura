@@ -2,7 +2,10 @@ import styled from "styled-components";
 
 export const Container = styled.section`
     display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
+    span {
+        color: ${props => props.theme.text};
+    }
 
     .text {
         font-weight: bold;
