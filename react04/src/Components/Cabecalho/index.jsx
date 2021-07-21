@@ -3,7 +3,7 @@ import bank_logo from "../../assets/images/bank_logo.svg"
 import { Navbar, ButtonLink } from './style'
 import { corPrimaria, txtBackgroundLight, backgroundLight } from '../../themes/variables'
 
-const Cabecalho = () => {
+const Cabecalho = (props) => {
   return (
     <Navbar colorTheme={corPrimaria} className="cabecalho">
       <img className="imagem-logo" src={bank_logo} alt="Logo Smart Bank" />
@@ -15,6 +15,9 @@ const Cabecalho = () => {
           Sair
         </ButtonLink>
       </div>
+      <figure onClick={() => props.handleChangeTheme()}>
+          <img src={props.lamp} alt='lamp'/>
+      </figure>
     </Navbar>
   );
 };

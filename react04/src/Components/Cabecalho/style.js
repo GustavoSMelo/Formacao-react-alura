@@ -7,9 +7,13 @@ export const Navbar = styled.header`
   padding: 0 15vw;
   height: 10vh;
   align-items: center;
-  img {
+  figure > img, img {
     height: 50px;
     width: 50px;
+  }
+
+  figure > img {
+    cursor: pointer;
   }
 `
 
